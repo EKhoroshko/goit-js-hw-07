@@ -4,7 +4,7 @@ let numbInputLength = parseInt(inputLength);
 
 input.addEventListener('input', onInutChange);
 function onInutChange(e) {
-    console.log(numbInputLength);
+
     if (e.currentTarget.value.length <= numbInputLength) {
         input.classList.remove("invalid");
         input.classList.add("valid");
