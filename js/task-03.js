@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alt: 'Group of Horses Running',
         },
     ];
+
     function createList() {
         for (let image of images) {
             const listRef = document.querySelector('#gallery');
@@ -25,3 +26,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     createList(images);
 });
+
