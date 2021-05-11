@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     ];
 
-    function createList() {
-        for (let image of images) {
-            const listRef = document.querySelector('#gallery');
-            listRef.insertAdjacentHTML('beforeend', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
-        }
+    const listRef = document.querySelector('#gallery');
+    listRef.insertAdjacentHTML('beforeend', createList(images));
+
+    function createList(images) {
+        return images.map(({ url, alt }) => {
+            return `<li><img src="${url}" alt="${alt}"></li>`;
+        });
     }
-
-    createList(images);
 });
-
