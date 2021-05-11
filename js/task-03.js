@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function createList(images) {
         return images.map(({ url, alt }) => {
             return `<li><img src="${url}" alt="${alt}"></li>`;
-        });
+        }).join('');
     }
 });
