@@ -1,11 +1,9 @@
 const input = document.querySelector('#validation-input');
-let inputLength = input.getAttribute('data-length');
-let numbInputLength = parseInt(inputLength);
 
 input.addEventListener('input', onInutChange);
 function onInutChange(e) {
-
-    if (e.currentTarget.value.length <= numbInputLength) {
+    const correctLength = this.dataset.length;
+    if (e.currentTarget.value.length <= correctLength) {
         input.classList.remove("invalid");
         input.classList.add("valid");
 
@@ -13,11 +11,8 @@ function onInutChange(e) {
         input.classList.remove("valid");
         input.classList.remove("invalid");
 
-    } if (e.currentTarget.value.length > numbInputLength) {
+    } if (e.currentTarget.value.length > correctLength) {
         input.classList.add("invalid");
         input.classList.remove("valid");
     }
 }
-
-
-
