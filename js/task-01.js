@@ -8,7 +8,3 @@ const categoriyList = [...category].map(
 )
     .join("\n");
 console.log(categoriyList);
-
-
-
-
