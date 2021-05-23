@@ -16,3 +16,4 @@ function onInutChange(e) {
         input.classList.remove("valid");
     }
 }
+
